@@ -30,11 +30,10 @@ std::vector<std::wstring> G_targetTitle{L"BlackScreen Window", L"屏幕广播", 
 auto shouldExit = false;
 
 int main() {
-    // setlocale(LC_ALL, "zh_CN.UTF-8"); // Legacy C style setlocale
-    std::locale::global(std::locale("zh_CN.utf8"));
     std::ios::sync_with_stdio(false);
-    std::cout << "Initialize Locale... \nCheckout locale settings...\n";
-    std::locale::global(std::locale("zh_CN.UTF-8"));
+    std::cout << "Initialize Global Locale...\n";
+    // setlocale(LC_ALL, "zh_CN.UTF-8"); // Legacy C style setlocale
+    std::locale::global(std::locale("zh_CN.UTF8"));
     std::cout << "std::locale " << std::locale().name() << "\n";
     std::cout << "std::cin/cout " << std::cin.getloc().name() << " / " << std::cin.getloc().name() << "\n";
     std::cout << "std::wcin/wcout " << std::wcin.getloc().name() << " / " << std::wcin.getloc().name() << "\n";
