@@ -31,18 +31,18 @@ auto shouldExit = false;
 
 auto globalLocale = std::locale("zh_CN.UTF8");
 
-int main() {
+int main(int argc,char *argv[]) {
     std::ios::sync_with_stdio(false);
-    std::cout << "Initialize Global Locale...\n";
-    // setlocale(LC_ALL, "zh_CN.UTF-8"); // Legacy C style setlocale
+//    std::cout << "Initialize Global Locale...\n";
+//    // setlocale(LC_ALL, "zh_CN.UTF-8"); // Legacy C style setlocale
     std::locale::global(globalLocale);
     std::cout.imbue(globalLocale);
     std::cin.imbue(globalLocale);
     std::wcin.imbue(globalLocale);
     std::wcout.imbue(globalLocale);
-    std::cout << "std::locale " << std::locale().name() << "\n";
-    std::cout << "std::cin/cout " << std::cin.getloc().name() << " / " << std::cin.getloc().name() << "\n";
-    std::cout << "std::wcin/wcout " << std::wcin.getloc().name() << " / " << std::wcin.getloc().name() << "\n";
+//    std::cout << "std::locale " << std::locale().name() << "\n";
+//    std::cout << "std::cin/cout " << std::cin.getloc().name() << " / " << std::cin.getloc().name() << "\n";
+//    std::cout << "std::wcin/wcout " << std::wcin.getloc().name() << " / " << std::wcin.getloc().name() << "\n";
     menu:
     std::cout << "Welcome to the " << G_targetProcessName <<" Killer\n"; // Print the Menu
     // std::cout << "\t\t - Made in China!(Too lazy to write any Chinese(Abs not a gcc charset bug, MSVC yyds)^v^)\n";
